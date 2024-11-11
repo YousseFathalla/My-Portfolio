@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ResumeComponent } from './resume/resume.component';
-import { ContactComponent } from './contact/contact.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { NextComponent } from './next/next.component';
+import { LandingComponent } from './sections/landing/landing.component';
+import { SkillsComponent } from './sections/skills/skills.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
+import { ResumeComponent } from './sections/resume/resume.component';
+import { ContactComponent } from './sections/contact/contact.component';
+import { NavbarComponent } from './commons/navbar/navbar.component';
+import { NextComponent } from './sections/next/next.component';
+import { AboutComponent } from './sections/about/about.component';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { NextComponent } from './next/next.component';
   standalone: true,
   imports: [
     NavbarComponent,
+    LandingComponent,
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,

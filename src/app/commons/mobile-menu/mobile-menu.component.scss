@@ -1,0 +1,16 @@
+.mobile-menu {
+  position: absolute;
+  height: 30px;
+  width: fit-content;
+  right: 0px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  .mat-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .material-icons {
+    font-size: 30px;
+  }
+}

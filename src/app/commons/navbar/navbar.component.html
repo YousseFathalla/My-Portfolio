@@ -1,0 +1,28 @@
+<nav class="sticky-top mat-primary mat-bg-secondary">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="logo col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-12">
+        <img src="assets/images/Logo.png" alt="logo-image" class="img-fluid" />
+      </div>
+
+      <div class="links col-xxl-8 col-xl-7 col-lg-7 d-none d-lg-block">
+        <ul>
+          <li matRipple (click)="scrollToSection('about')">ABOUT</li>
+          <li matRipple (click)="scrollToSection('skills')">SKILLS</li>
+          <li matRipple (click)="scrollToSection('projects')">PROJECTS</li>
+          <li matRipple (click)="scrollToSection('resume')">RESUME</li>
+          <li matRipple (click)="scrollToSection('contact')">CONTACT</li>
+        </ul>
+      </div>
+
+      <mobile-menu class="d-block d-lg-none" />
+
+      <div
+        (click)="scrollToSection('next')"
+        class="col-xxl-2 col-xl-3 col-lg-3 d-none d-lg-block"
+      >
+        <div matRipple class="info">What's Next?</div>
+      </div>
+    </div>
+  </div>
+</nav>

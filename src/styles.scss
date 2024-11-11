@@ -1,18 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/sass/custom-theme.scss";
 
 html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  background-color: #f3f3fa;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-// p {
-//   padding-top: 300px;
-//   padding-bottom: 300px;
-// }
+
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }

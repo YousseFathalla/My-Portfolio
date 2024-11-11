@@ -1,0 +1,19 @@
+$primary-color: #005cbb;
+
+$secondary-color: #d7e3ff;
+
+$third-color: #e0e0ff;
+
+.mat-primary {
+  color: $primary-color;
+}
+.mat-secondary {
+  color: $secondary-color;
+}
+.mat-third {
+  color: $third-color;
+}
+
+.mat-bg-secondary {
+  background-color: $secondary-color;
+}

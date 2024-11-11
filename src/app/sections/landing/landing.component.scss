@@ -1,0 +1,10 @@
+.landing {
+  height: calc(100dvb - 75px);
+  .container {
+    height: 75dvb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

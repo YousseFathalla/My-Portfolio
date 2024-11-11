@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { MatRipple } from '@angular/material/core';
+import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'navbar',
   standalone: true,
-  imports: [],
+  imports: [MatRipple, MobileMenuComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

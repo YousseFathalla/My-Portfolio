@@ -1,0 +1,18 @@
+<div style="height: 100dvb">
+  <p>about works!</p>
+</div>
+<mat-toolbar color="primary">
+  <span>My Portfolio</span>
+  <span class="spacer"></span>
+
+  <!-- Menu Button -->
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+  <!-- Menu Definition -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>About</button>
+    <button mat-menu-item>Projects</button>
+    <button mat-menu-item>Contact</button>
+  </mat-menu>
+</mat-toolbar>
