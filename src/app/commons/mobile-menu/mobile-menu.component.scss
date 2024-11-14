@@ -14,3 +14,16 @@
     font-size: 30px;
   }
 }
+
+::ng-deep button {
+  text-align: center !important;
+}
+::ng-deep .cdk-overlay-connected-position-bounding-box {
+  top: 75px !important;
+}
+::ng-deep .mat-mdc-menu-content {
+  padding: 0px !important;
+}
+.mat-divider {
+  margin: 0px !important;
+}

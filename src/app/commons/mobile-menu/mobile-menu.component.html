@@ -1,3 +1,26 @@
-<div class="mobile-menu" (click)="toggleMenu()">
+<div class="mobile-menu" [matMenuTriggerFor]="menu" (click)="toggleMenu()">
   <mat-icon>{{ isMenuOpen ? "menu_open" : "menu" }}</mat-icon>
 </div>
+
+<mat-menu #menu="matMenu" class="menu-list">
+  <button mat-menu-item (click)="scrollToSection('about'); closeMenu()">
+    ABOUT
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="scrollToSection('skills'); closeMenu()">
+    SKILLS
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="scrollToSection('projects'); closeMenu()">
+    PROJECTS
+  </button>
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="scrollToSection('contact'); closeMenu()">
+    CONTACT
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item (click)="scrollToSection('next'); closeMenu()">
+    What's Next?
+  </button>
+</mat-menu>

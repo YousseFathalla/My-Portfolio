@@ -1,3 +1,17 @@
-<div style="height: 100dvb">
-  <p>skills works!</p>
-</div>
+<section class="skills">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="title pt-4 pb-4">SKILLS</h1>
+      <div class="col-12 row skills-container">
+        <div class="col-4 skill" *ngFor="let skill of skills">
+          {{ skill }}
+        </div>
+      </div>
+      <div class="col-6 row text-center align-content-center">
+        <h1 class="title pt-4 pb-4">LANGUAGES</h1>
+        <div class="col-6">Arabic</div>
+        <div class="col-6">English</div>
+      </div>
+    </div>
+  </div>
+</section>
