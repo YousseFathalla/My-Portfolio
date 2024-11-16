@@ -3,7 +3,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { LandingComponent } from './sections/landing/landing.component';
 import { SkillsComponent } from './sections/skills/skills.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
-import { ResumeComponent } from './sections/resume/resume.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { NavbarComponent } from './commons/navbar/navbar.component';
 import { NextComponent } from './sections/next/next.component';
@@ -19,7 +18,6 @@ import { AboutComponent } from './sections/about/about.component';
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ResumeComponent,
     ContactComponent,
     NextComponent,
     MatButtonModule],

@@ -1,0 +1,35 @@
+.projects {
+  .card {
+    border-color: #d9ecff;
+    .header {
+      h5 {
+        color: #005dbbc2;
+        text-align: center;
+        font-weight: 500;
+        margin: 12px;
+      }
+    }
+    .content-container {
+      > div {
+        padding-bottom: 5px;
+        text-align: center;
+      }
+      padding: 17px 12px 12px;
+      .content {
+        padding-right: 5px;
+        color: #425e91;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .description {
+        color: #5f3869;
+
+        font-size: 18px;
+      }
+    }
+    .footer {
+      padding: 0 12px 17px;
+      text-align: center;
+    }
+  }
+}

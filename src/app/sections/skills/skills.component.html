@@ -2,16 +2,45 @@
   <div class="container">
     <div class="row justify-content-center">
       <h1 class="title pt-4 pb-4">SKILLS</h1>
-      <div class="col-12 row skills-container">
-        <div class="col-4 skill" *ngFor="let skill of skills">
-          {{ skill }}
+      <div class="col-12 row skills-container pb-3">
+        <div class="col-6 skill" *ngFor="let skill of skills">
+          <p>{{ skill.name }}</p>
+          <div class="skill-progress">
+            <div class="progress-bar-wrapper">
+              <div
+                class="progress-bar"
+                #progressBar
+                [attr.data-percentage]="skill.percentage"
+                style="width: 0%"
+              ></div>
+            </div>
+            <div>{{ skill.percentage }}%</div>
+          </div>
         </div>
-      </div>
-      <div class="col-6 row text-center align-content-center">
-        <h1 class="title pt-4 pb-4">LANGUAGES</h1>
-        <div class="col-6">Arabic</div>
-        <div class="col-6">English</div>
       </div>
     </div>
   </div>
+</section>
+
+<section class="languages">
+  <div class="container">
+    <h1 class="title pt-4 pb-4">LANGUAGES</h1>
+    <div class="row">
+      <div
+        *ngFor="let language of languages"
+        class="language-row justify-content-center col-6"
+      >
+        <div class="language-name">{{ language.name }}</div>
+        <div class="level-boxes">
+          <div
+            *ngFor="let box of [].constructor(5); let i = index"
+            [class.filled]="i < language.levelNumber"
+            class="level-box"
+          ></div>
+        </div>
+        <div class="language-level">{{ language.level | uppercase }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
 </section>
