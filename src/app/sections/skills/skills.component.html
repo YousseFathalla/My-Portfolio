@@ -3,7 +3,10 @@
     <div class="row justify-content-center">
       <h1 class="title pt-4 pb-4">SKILLS</h1>
       <div class="col-12 row skills-container pb-3">
-        <div class="col-6 skill" *ngFor="let skill of skills">
+        <div
+          class="col-lg-6 col-md-12 col-sm-12 col-12 skill"
+          *ngFor="let skill of skills"
+        >
           <p>{{ skill.name }}</p>
           <div class="skill-progress">
             <div class="progress-bar-wrapper">
@@ -25,10 +28,10 @@
 <section class="languages">
   <div class="container">
     <h1 class="title pt-4 pb-4">LANGUAGES</h1>
-    <div class="row">
+    <div class="row px-5">
       <div
         *ngFor="let language of languages"
-        class="language-row justify-content-center col-6"
+        class="language-row justify-content-lg-center justify-content-start col-lg-6 col-md-12 col-sm-12 col-12"
       >
         <div class="language-name">{{ language.name }}</div>
         <div class="level-boxes">
@@ -41,6 +44,6 @@
         <div class="language-level">{{ language.level | uppercase }}</div>
       </div>
     </div>
+    <div class="divider"></div>
   </div>
-  <div class="divider"></div>
 </section>

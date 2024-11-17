@@ -1,0 +1,54 @@
+.contact {
+  .name-email {
+    display: flex;
+    gap: 16px;
+  }
+
+  .name-field {
+    flex: 1;
+  }
+
+  .email-field {
+    flex: 2;
+  }
+
+  .subject {
+    mat-form-field {
+      width: 100%;
+    }
+  }
+  .textarea {
+    mat-form-field {
+      width: 100%;
+      textarea {
+        min-height: 150px;
+      }
+    }
+  }
+  button {
+    width: 100%;
+  }
+}
+
+.links {
+  // padding-top: 20px;
+  // text-align: center;
+  a {
+    i {
+      padding: 0px 7.5px;
+      font-size: 32px;
+    }
+    .fa-square-facebook {
+      color: #1877f2;
+    }
+    .fa-linkedin {
+      color: #0a66c2;
+    }
+    .fa-square-github {
+      color: #333;
+    }
+    .fa-square-instagram {
+      color: #c13584;
+    }
+  }
+}

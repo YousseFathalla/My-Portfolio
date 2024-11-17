@@ -3,7 +3,7 @@ import { MatRipple } from '@angular/material/core';
 import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 
 @Component({
-  selector: 'navbar',
+  selector: 'app-navbar',
   standalone: true,
   imports: [MatRipple, MobileMenuComponent],
   templateUrl: './navbar.component.html',
@@ -14,7 +14,7 @@ export class NavbarComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - 100;
+      const offsetPosition = elementPosition - 70;
 
       window.scrollTo({
         top: offsetPosition,

@@ -1,3 +1,82 @@
-<div style="height: 100dvb">
-  <p>contact works!</p>
-</div>
+<section class="contact pt-5 pb-5">
+  <h1 class="title pb-5">Contact Me</h1>
+  <div class="container">
+    <div class="row justify-content-evenly">
+      <!-- form  -->
+      <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+        <div class="name-email pb-1">
+          <mat-form-field class="name-field">
+            <mat-label>Name</mat-label>
+            <input matInput />
+          </mat-form-field>
+
+          <mat-form-field class="email-field">
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              placeholder="Email@example.com"
+              [formControl]="email"
+              (blur)="updateErrorMessage()"
+              required
+            />
+            @if (email.invalid) {
+            <mat-error>{{ errorMessage() }}</mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="subject">
+          <mat-form-field>
+            <mat-label>Subject</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="textarea">
+          <mat-form-field>
+            <mat-label>Textarea</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </div>
+        <button mat-flat-button>
+          <mat-icon>forward_to_inbox</mat-icon>
+          Submit
+        </button>
+      </div>
+      <!-- info -->
+      <div
+        class="col-lg-5 col-md-12 col-sm-12 col-12 pt-4 text-center text-lg-start"
+      >
+        <div class="name_">
+          <h6 class="mb-1 mat-primary">Youssef Fathalla</h6>
+          <p class="ps-1">Front-End Developer | Angular</p>
+        </div>
+        <div class="contact_">
+          <div>
+            <h6 class="mb-1 pt-3 mat-primary">Phone</h6>
+            <p>+(20)1274357411</p>
+          </div>
+
+          <div>
+            <h6 class="mb-1 pt-3 mat-primary">Email</h6>
+            <p>Youssefathalla&#64;gmail.com</p>
+          </div>
+        </div>
+        <div class="social-media pt-4">
+          <div class="links">
+            <a href="https://www.facebook.com/youssefathalla" target="_blank"
+              ><i class="fa-brands fa-square-facebook"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/youssefathalla" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/YousseFathalla" target="_blank"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+            <a href="https://www.instagram.com/youssefathalla" target="_blank"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

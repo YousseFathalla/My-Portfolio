@@ -7,6 +7,7 @@ import { ContactComponent } from './sections/contact/contact.component';
 import { NavbarComponent } from './commons/navbar/navbar.component';
 import { NextComponent } from './sections/next/next.component';
 import { AboutComponent } from './sections/about/about.component';
+import { FooterComponent } from './commons/footer/footer.component';
 
 
 @Component({
@@ -20,6 +21,7 @@ import { AboutComponent } from './sections/about/about.component';
     ProjectsComponent,
     ContactComponent,
     NextComponent,
+    FooterComponent,
     MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

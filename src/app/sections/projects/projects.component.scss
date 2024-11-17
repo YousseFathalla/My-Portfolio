@@ -7,6 +7,7 @@
         text-align: center;
         font-weight: 500;
         margin: 12px;
+        font-size: 25px;
       }
     }
     .content-container {
@@ -18,13 +19,12 @@
       .content {
         padding-right: 5px;
         color: #425e91;
-        font-size: 18px;
+        font-size: clamp(13px, 2vw, 16px);
         font-weight: 600;
       }
       .description {
         color: #5f3869;
-
-        font-size: 18px;
+        font-size: clamp(13px, 2vw, 16px);
       }
     }
     .footer {

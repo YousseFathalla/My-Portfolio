@@ -18,7 +18,7 @@ export class MobileMenuComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - 100;
+      const offsetPosition = elementPosition - 70;
 
       window.scrollTo({
         top: offsetPosition,
