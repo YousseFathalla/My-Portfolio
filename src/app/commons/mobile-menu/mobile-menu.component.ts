@@ -5,11 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
-  selector: 'mobile-menu',
-  standalone: true,
-  imports: [MatIconModule, MatMenuModule, MatDividerModule],
-  templateUrl: './mobile-menu.component.html',
-  styleUrl: './mobile-menu.component.scss'
+    selector: 'mobile-menu',
+    imports: [MatIconModule, MatMenuModule, MatDividerModule],
+    templateUrl: './mobile-menu.component.html',
+    styleUrl: './mobile-menu.component.scss'
 })
 export class MobileMenuComponent {
   isMenuOpen = false;

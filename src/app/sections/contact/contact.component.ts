@@ -7,11 +7,10 @@ import { merge } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 @Component({
-  selector: 'contact',
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatIcon],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'contact',
+    imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatIcon],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   readonly email = new FormControl('', [Validators.required, Validators.email]);

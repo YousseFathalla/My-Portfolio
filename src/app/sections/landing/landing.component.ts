@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'landing',
-  standalone: true,
   imports: [MatButtonModule, MatIconModule, MatDividerModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'

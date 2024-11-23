@@ -3,11 +3,10 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { MatDivider } from '@angular/material/divider';
 
 @Component({
-  selector: 'skills',
-  standalone: true,
-  imports: [NgFor, UpperCasePipe],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+    selector: 'skills',
+    imports: [NgFor, UpperCasePipe],
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
 

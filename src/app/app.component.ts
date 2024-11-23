@@ -12,7 +12,6 @@ import { FooterComponent } from './commons/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     NavbarComponent,
     LandingComponent,
@@ -22,7 +21,8 @@ import { FooterComponent } from './commons/footer/footer.component';
     ContactComponent,
     NextComponent,
     FooterComponent,
-    MatButtonModule],
+    MatButtonModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
