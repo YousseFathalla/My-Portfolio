@@ -1,16 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { merge } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 @Component({
-    selector: 'contact',
-    imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatIcon],
-    templateUrl: './contact.component.html',
-    styleUrl: './contact.component.scss'
+  selector: 'contact',
+  imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatIcon],
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   readonly email = new FormControl('', [Validators.required, Validators.email]);
@@ -31,5 +31,14 @@ export class ContactComponent {
     } else {
       this.errorMessage.set('');
     }
+  }
+
+  saveForm(saveForm: NgForm) {
+    const formData = { ...saveForm.value };
+
+    console.log("name", formData.name);
+    console.log("email", formData.email);
+    console.log("subject", formData.subject);
+    console.log("textarea", formData.textarea);
   }
 }

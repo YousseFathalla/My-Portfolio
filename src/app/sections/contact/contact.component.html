@@ -4,42 +4,45 @@
     <div class="row justify-content-evenly">
       <!-- form  -->
       <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-        <div class="name-email pb-1">
-          <mat-form-field class="name-field">
-            <mat-label>Name</mat-label>
-            <input matInput />
-          </mat-form-field>
+        <form #contactForm="ngForm" (ngSubmit)="saveForm(contactForm)">
+          <div class="name-email pb-1">
+            <mat-form-field class="name-field">
+              <mat-label>Name</mat-label>
+              <input matInput name="name" ngModel required />
+            </mat-form-field>
 
-          <mat-form-field class="email-field">
-            <mat-label>Enter your email</mat-label>
-            <input
-              matInput
-              placeholder="Email@example.com"
-              [formControl]="email"
-              (blur)="updateErrorMessage()"
-              required
-            />
-            @if (email.invalid) {
-            <mat-error>{{ errorMessage() }}</mat-error>
-            }
-          </mat-form-field>
-        </div>
-        <div class="subject">
-          <mat-form-field>
-            <mat-label>Subject</mat-label>
-            <input matInput />
-          </mat-form-field>
-        </div>
-        <div class="textarea">
-          <mat-form-field>
-            <mat-label>Textarea</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
-        </div>
-        <button mat-flat-button>
-          <mat-icon>forward_to_inbox</mat-icon>
-          Submit
-        </button>
+            <mat-form-field class="email-field">
+              <mat-label>Enter your email</mat-label>
+              <input
+                matInput
+                placeholder="Email@example.com"
+                (blur)="updateErrorMessage()"
+                required
+                name="email"
+                ngModel
+              />
+              @if (email.invalid) {
+              <mat-error>{{ errorMessage() }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <div class="subject">
+            <mat-form-field>
+              <mat-label>Subject</mat-label>
+              <input matInput required ngModel name="subject" />
+            </mat-form-field>
+          </div>
+          <div class="textarea">
+            <mat-form-field>
+              <mat-label>Textarea</mat-label>
+              <textarea matInput required ngModel name="textarea"></textarea>
+            </mat-form-field>
+          </div>
+          <button mat-flat-button type="submit" [disabled]="!contactForm.valid">
+            <mat-icon>forward_to_inbox</mat-icon>
+            Submit
+          </button>
+        </form>
       </div>
       <!-- info -->
       <div
