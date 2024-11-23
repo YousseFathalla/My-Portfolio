@@ -5,7 +5,7 @@ nav {
   .logo {
     text-align: center;
     img {
-      width: 75px;
+      width: 66px;
     }
   }
 
@@ -16,12 +16,13 @@ nav {
   }
 
   .info {
-    padding: 26px;
+    padding: 20px;
     width: fit-content;
     cursor: pointer;
     font-size: clamp(16px, 1.5vw, 18px);
     transition: 0.3s;
     font-weight: 500;
+    font-size: 19px;
     &:hover {
       background-color: #425e9120;
     }
@@ -37,7 +38,8 @@ nav {
     cursor: pointer;
     li {
       transition: 0.3s;
-      padding: 26px;
+      padding: 20px;
+      font-size: 19px;
       &:hover {
         background-color: #425e9120;
       }

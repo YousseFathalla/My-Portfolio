@@ -8,7 +8,8 @@
           <div class="name-email pb-1">
             <mat-form-field class="name-field">
               <mat-label>Name</mat-label>
-              <input matInput name="name" ngModel required />
+              <input matInput name="name" ngModel required type="text" />
+              <mat-error> Please enter your name</mat-error>
             </mat-form-field>
 
             <mat-form-field class="email-field">
@@ -16,29 +17,49 @@
               <input
                 matInput
                 placeholder="Email@example.com"
-                (blur)="updateErrorMessage()"
                 required
                 name="email"
                 ngModel
+                email
+                #email="ngModel"
+                type="email"
               />
-              @if (email.invalid) {
-              <mat-error>{{ errorMessage() }}</mat-error>
+              @if (email.errors?.['required']) {
+              <mat-error> You must enter a value. </mat-error>
+              } @if (email.errors?.['email'] && !email.errors?.['required']) {
+              <mat-error> Not a valid email. </mat-error>
               }
             </mat-form-field>
           </div>
-          <div class="subject">
+
+          <div class="subject pb-1">
             <mat-form-field>
               <mat-label>Subject</mat-label>
-              <input matInput required ngModel name="subject" />
+              <input matInput required ngModel name="subject" type="text" />
+              <mat-error> Please enter a subject</mat-error>
             </mat-form-field>
           </div>
-          <div class="textarea">
+
+          <div class="textarea pb-1">
             <mat-form-field>
-              <mat-label>Textarea</mat-label>
-              <textarea matInput required ngModel name="textarea"></textarea>
+              <mat-label>Message</mat-label>
+              <textarea
+                matInput
+                required
+                ngModel
+                name="message"
+                type="text"
+              ></textarea>
+              <mat-error> Please Leave a message </mat-error>
             </mat-form-field>
           </div>
-          <button mat-flat-button type="submit" [disabled]="!contactForm.valid">
+
+          <button
+            mat-flat-button
+            type="submit"
+            [disabled]="!contactForm.valid"
+            aria-label="submit button"
+          >
             <mat-icon>forward_to_inbox</mat-icon>
             Submit
           </button>
@@ -49,17 +70,25 @@
         class="col-lg-5 col-md-12 col-sm-12 col-12 pt-4 text-center text-lg-start"
       >
         <div class="name_">
-          <h6 class="mb-1 mat-primary">Youssef Fathalla</h6>
-          <p class="ps-1">Front-End Developer | Angular</p>
+          <h5 class="mb-1 mat-primary">Youssef Fathalla</h5>
+          <p>
+            Front-End Developer <span class="mat-primary"> | </span>Angular
+            <img
+              src="/assets/images/angular-icon-2.png"
+              alt="angular icon"
+              class="img-fluid"
+              style="width: 20px"
+            />
+          </p>
         </div>
         <div class="contact_">
           <div>
-            <h6 class="mb-1 pt-3 mat-primary">Phone</h6>
+            <h5 class="mb-1 pt-3 mat-primary">Phone</h5>
             <p>+(20)1274357411</p>
           </div>
 
           <div>
-            <h6 class="mb-1 pt-3 mat-primary">Email</h6>
+            <h5 class="mb-1 pt-3 mat-primary">Email</h5>
             <p>Youssefathalla&#64;gmail.com</p>
           </div>
         </div>
