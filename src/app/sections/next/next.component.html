@@ -1,1 +1,103 @@
-<p>next works!</p>
+<section class="next">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h1 class="title pt-4 pb-4">What's Next</h1>
+      </div>
+      <div class="col-8">
+        <div class="example-action-buttons pb-3 pt-3">
+          <button mat-button (click)="accordion().openAll()">Expand All</button>
+          <button mat-button (click)="accordion().closeAll()">
+            Collapse All
+          </button>
+        </div>
+        <mat-accordion class="example-headers-align" multi>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> Master Angular Signals </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Exploring the power of Angular signals to create reactive,
+              efficient, and scalable applications. My focus is on mastering
+              advanced patterns and integrating signals seamlessly into
+              real-world projects.
+            </p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> State Management </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Delving into modern state management tools like NgRx to build
+              maintainable, scalable applications with clean architecture and
+              predictable state flow.
+            </p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> UI/UX Expertise </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Enhancing user experiences through better design. I'm improving my
+              Figma skills, researching user behavior, and focusing on
+              accessibility to create intuitive interfaces.
+            </p>
+            <mat-datepicker></mat-datepicker>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> RxJS </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Strengthening my understanding of RxJS to master reactive
+              programming. My focus is on creating efficient, maintainable, and
+              scalable data streams for modern web applications.
+            </p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> Animations </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Exploring advanced web animations to create smooth, engaging, and
+              interactive user experiences using Angular’s animation tools.
+            </p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> Firebase </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Learning Firebase to integrate real-time databases,
+              authentication, and serverless functionalities seamlessly into my
+              web applications.
+            </p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> Component Design </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <p>
+              Developing reusable, accessible UI components that ensure
+              consistency across projects while embracing Angular Material and
+              custom design systems.
+            </p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</section>

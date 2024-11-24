@@ -21,7 +21,7 @@ import { FooterComponent } from './commons/footer/footer.component';
     ContactComponent,
     NextComponent,
     FooterComponent,
-    MatButtonModule
+    MatButtonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
