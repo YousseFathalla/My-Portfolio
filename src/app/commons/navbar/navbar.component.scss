@@ -3,9 +3,17 @@ nav {
   font-weight: 500;
   user-select: none;
   .logo {
-    text-align: center;
+    display: flex;
+    align-items: center;
     img {
       width: 66px;
+      margin: 0px -10px;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
     }
   }
 
@@ -16,7 +24,7 @@ nav {
   }
 
   .info {
-    padding: 20px;
+    padding: 20px 10px;
     width: fit-content;
     cursor: pointer;
     font-size: clamp(16px, 1.5vw, 18px);

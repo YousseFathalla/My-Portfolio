@@ -3,17 +3,17 @@
   <div class="container">
     <div class="row justify-content-evenly">
       <!-- form  -->
-      <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
         <form #contactForm="ngForm" (ngSubmit)="saveForm(contactForm)">
           <div class="name-email pb-1">
             <mat-form-field class="name-field">
               <mat-label>Name</mat-label>
               <input matInput name="name" ngModel required type="text" />
-              <mat-error> Please enter your name</mat-error>
+              <mat-error>Enter your name.</mat-error>
             </mat-form-field>
 
             <mat-form-field class="email-field">
-              <mat-label>Enter your email</mat-label>
+              <mat-label>Email</mat-label>
               <input
                 matInput
                 placeholder="Email@example.com"
@@ -25,9 +25,9 @@
                 type="email"
               />
               @if (email.errors?.['required']) {
-              <mat-error> You must enter a value. </mat-error>
+              <mat-error>Enter your email.</mat-error>
               } @if (email.errors?.['email'] && !email.errors?.['required']) {
-              <mat-error> Not a valid email. </mat-error>
+              <mat-error>Not a valid email.</mat-error>
               }
             </mat-form-field>
           </div>
@@ -36,7 +36,7 @@
             <mat-form-field>
               <mat-label>Subject</mat-label>
               <input matInput required ngModel name="subject" type="text" />
-              <mat-error> Please enter a subject</mat-error>
+              <mat-error> Enter a subject.</mat-error>
             </mat-form-field>
           </div>
 
@@ -50,7 +50,7 @@
                 name="message"
                 type="text"
               ></textarea>
-              <mat-error> Please Leave a message </mat-error>
+              <mat-error>Leave a message.</mat-error>
             </mat-form-field>
           </div>
 
